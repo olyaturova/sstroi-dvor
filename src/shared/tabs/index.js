@@ -1,4 +1,4 @@
 export * from './TabInfoOne';
 export * from './TabInfoTwo';
-export * from './tabs'
+export { Tabs } from './tabs'
 export * from './TabItem'
