@@ -5,7 +5,8 @@ import { API_ENDPOINTS } from '@/shared/api/constants';
 import styles from './ShopItemDetails.module.scss';
 import { TabInfoOne, TabInfoTwo } from "@/shared/tabs";
 import { ShopItemDetailsInfo } from "@/widgets/shop-item-details-info";
-import { Tabs } from "../../shared/tabs/tabs";
+import { Tabs } from "@/shared/tabs";
+
 
 const ShopItemDetails = () => {
     const navigate = useNavigate();
