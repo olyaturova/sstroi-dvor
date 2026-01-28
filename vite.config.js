@@ -4,7 +4,6 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/sstroi-dvor/',
   server: {
      open: true,
      port: 3000
