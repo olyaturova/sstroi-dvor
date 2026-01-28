@@ -1,1 +1,1 @@
-export { ScrollingAnnouncement } from './ScrollingAnnouncement';
+export * from './ScrollingAnnouncement';

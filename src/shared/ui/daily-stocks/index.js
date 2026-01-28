@@ -1,1 +1,1 @@
-export { DailyStocks } from './DailyStocks';
+export * from './DailyStocks';

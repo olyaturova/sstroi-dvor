@@ -1,2 +1,2 @@
-export { ModalPromo } from './ModalPromo';
-export { ContentPromo } from './ContentPromo';
+export * from './ModalPromo';
+export * from './ContentPromo';

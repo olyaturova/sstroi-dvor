@@ -1,7 +1,7 @@
 import { PiPlusLight } from "react-icons/pi";
 import { PiMinusLight } from "react-icons/pi";
 
-const ChangeQuantity = ({quantity, setQuantity}) => {
+export const ChangeQuantity = ({quantity, setQuantity}) => {
     const addQuantity = () => {
         const newQuantity = quantity + 1;
         setQuantity(newQuantity)
@@ -22,4 +22,3 @@ const ChangeQuantity = ({quantity, setQuantity}) => {
     )
 }
 
-export default ChangeQuantity;

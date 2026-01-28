@@ -1,3 +1,3 @@
 
-export { LoaderPage } from './LoaderPage';
-export { Loader } from './loader';
+export * from './LoaderPage';
+export * from './loader';

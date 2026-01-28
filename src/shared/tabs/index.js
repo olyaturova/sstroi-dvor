@@ -1,2 +1,4 @@
-export { TabInfoOne } from './TabInfoOne';
-export { TabInfoTwo } from './TabInfoTwo';
+export * from './TabInfoOne';
+export * from './TabInfoTwo';
+export * from './tabs'
+export * from './TabItem'

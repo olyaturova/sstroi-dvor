@@ -1,7 +1,6 @@
 import axios from 'axios';
-import { API_ENDPOINTS } from '@/shared/api/constants'; // ← Импорт констант
+import { API_ENDPOINTS } from '@/shared/api/constants'; т
 
-// Получаем BASE_URL из констант
 const API_URL = `${API_ENDPOINTS.AUTH.replace('/auth', '')}`;
 
 const publicApi = axios.create({
@@ -27,8 +26,6 @@ export const publicService = {
     }
   },
   
-  // Дополнительные методы можно добавить позже
 };
 
-// Экспортируем для обратной совместимости
 export { API_ENDPOINTS };

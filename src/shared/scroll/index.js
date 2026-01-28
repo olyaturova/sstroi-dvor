@@ -1,3 +1,3 @@
-export { ScrollToTop } from './ScrollToTop';
-export { ScrollToTopBtn } from './ScrollToTopBtn';
-export { useScroll } from './useScroll';
+export * from './ScrollToTop';
+export * from './ScrollToTopBtn';
+export * from './useScroll';
