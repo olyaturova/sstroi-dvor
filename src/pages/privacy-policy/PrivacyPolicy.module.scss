@@ -1,0 +1,118 @@
+.privacyContainer {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.privacyCard {
+    border-radius: 20px;
+    overflow: hidden;
+    
+    &:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    }
+}
+
+.privacyHeading {
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 1rem;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(90deg, #3498db, #2ecc71);
+        border-radius: 2px;
+    }
+}
+
+.subheadingPolicy {
+    color: #34495e;
+    padding: 0.75rem 0;
+    border-bottom: 2px solid #ecf0f1;
+    
+    .badge {
+        font-size: 0.9em;
+        padding: 0.5em 0.8em;
+        border-radius: 50%;
+    }
+}
+
+.list-group-item {
+    border: none;
+    padding: 0.75rem 0;
+    background: transparent;
+    
+    &:hover {
+        background-color: rgba(52, 152, 219, 0.05);
+        padding-left: 0.5rem;
+        transition: all 0.2s ease;
+    }
+    
+    i {
+        font-size: 1.2em;
+    }
+}
+
+.alert-warning {
+    border-left: 4px solid #f39c12;
+}
+
+.alert-info {
+    border-left: 4px solid #3498db;
+}
+
+.list-unstyled {
+    li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+        
+        i.bi-dot {
+            font-size: 1.5em;
+            vertical-align: middle;
+        }
+        
+        i.bi-check-circle {
+            font-size: 1.2em;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .privacyContainer {
+        padding: 1rem;
+    }
+    
+    .privacyCard {
+        .card-body {
+            padding: 1.5rem !important;
+        }
+    }
+    
+    .privacyHeading {
+        font-size: 2rem !important;
+    }
+    
+    .subheadingPolicy {
+        font-size: 1.5rem;
+    }
+}
+

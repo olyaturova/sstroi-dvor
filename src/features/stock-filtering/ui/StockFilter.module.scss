@@ -1,0 +1,167 @@
+.filterStock {
+  margin: 10px 40px 50px;
+  
+  @media (max-width: 750px) {
+    margin: 10px 20px 50px;
+  }
+  
+  @media (max-width: 540px) {
+    margin: 10px 15px 30px;
+  }
+}
+
+.filterIcon {
+  padding-right: 5px;
+  font-size: 20px;
+  vertical-align: middle;
+  
+  @media (max-width: 750px) {
+    font-size: 18px;
+  }
+  
+  @media (max-width: 540px) {
+    font-size: 16px;
+  }
+}
+
+.dropdownToggle {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 1px solid #202020;
+  background-color: #ffffff;
+  color: #202020;
+  transition: all 0.3s ease-in-out;
+  
+  &:hover, &:focus, &:active {
+    color: #ffffff;
+    background-color: #202020;
+    border-color: #202020;
+  }
+  
+  @media (max-width: 750px) {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  
+  @media (max-width: 540px) {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+  
+  @media (max-width: 413px) {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+.dropdownMenu {
+  height: 250px;
+  overflow-y: scroll;
+  max-width: 350px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+  @media (max-width: 750px) {
+    max-width: 300px;
+    height: 220px;
+  }
+  
+  @media (max-width: 540px) {
+    max-width: 280px;
+    height: 200px;
+  }
+}
+
+.dropdownItem {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  padding: 8px 16px;
+  color: #202020;
+  transition: all 0.2s ease;
+  white-space: normal;
+  word-wrap: break-word;
+  
+  &:hover, &:focus {
+    background-color: #f8f9fa;
+    color: #202020;
+  }
+  
+  &:active {
+    background-color: #e2ac5a;
+    color: #ffffff;
+  }
+  
+  @media (max-width: 750px) {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+  
+  @media (max-width: 540px) {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+.dropdownItemActive {
+  background-color: #202020;
+  color: #ffffff;
+  
+  &:hover {
+    background-color: #333333;
+    color: #ffffff;
+  }
+}
+
+// Кастомные стили для кнопок дропдауна (если нужно переопределить Bootstrap)
+.customDropdown {
+  .btn-light {
+    background-color: #ffffff;
+    border-color: #202020;
+    color: #202020;
+    
+    &:hover {
+      background-color: #202020;
+      color: #ffffff;
+    }
+  }
+  
+  .dropdown-toggle::after {
+    margin-left: 10px;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownMenu {
+  animation: slideDown 0.3s ease forwards;
+}
+
+.dropdownMenu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdownMenu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.dropdownMenu::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+  
+  &:hover {
+    background: #a1a1a1;
+  }
+}

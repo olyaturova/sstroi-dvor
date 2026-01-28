@@ -1,0 +1,355 @@
+// StockDetails.module.scss
+
+// Общие стили для всех компонентов StockDetails
+.stockDetailsContainer {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+// Стили для StocksDetailsTop
+.stockCover {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  @media (max-width: 750px) {
+    height: fit-content;
+  }
+}
+
+.headingCover {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailedStocksHeading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: 1100px) {
+    padding: 0px 50px;
+  }
+
+  @media (max-width: 950px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+  }
+
+  @media (max-width: 750px) {
+    padding: 80px 15px 0px;
+  }
+}
+
+.columnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+}
+
+.detailedStockHeading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px #202020;
+  line-height: 1;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 0;
+
+  @media (max-width: 750px) {
+    font-size: 35px;
+  }
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+}
+
+// Стили для StocksDetailsBottom
+.prosSection {
+  background-color: #000;
+  padding: 120px 200px 50px;
+
+  @media (max-width: 950px) {
+    padding: 90px 50px 30px;
+  }
+
+  @media (max-width: 750px) {
+    padding: 60px 15px 20px;
+  }
+}
+
+.detailedStocksTopPhoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailedStockPhoto {
+  width: 410px;
+  height: 410px;
+  box-shadow: 1px 1px 5px #e2ac5a, -1px -1px 5px #e2ac5a;
+  object-fit: cover;
+
+  @media (max-width: 750px) {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 540px) {
+    width: 280px;
+    height: 280px;
+  }
+
+  @media (max-width: 413px) {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.second {
+  margin-bottom: 30px;
+
+  @media (max-width: 750px) {
+    margin-bottom: 50px;
+  }
+}
+
+.stockExplanation {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 25px 0px 50px;
+  text-shadow: 2px 2px 8px #202020;
+  color: #ffffff;
+
+  @media (max-width: 750px) {
+    font-size: 17px;
+    margin: 15px 0px 30px;
+  }
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  margin: 7px 0px;
+  color: #ffffff;
+}
+
+.dashIcon {
+  font-size: 30px;
+  margin-right: 7px;
+  color: #e2ac5a;
+
+  @media (max-width: 750px) {
+    font-size: 23px;
+  }
+}
+
+// Стили для StocksDetailsDescription
+.stockDescription {
+  background-color: #000;
+  padding: 0px 200px 30px;
+
+  @media (max-width: 950px) {
+    padding: 0px 50px 30px;
+  }
+
+  @media (max-width: 750px) {
+    padding: 0px 15px 30px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left {
+  text-align: start;
+}
+
+.showMoreBtn {
+  border: none;
+  background-color: transparent;
+  color: #e2ac5a;
+  text-decoration: underline;
+  padding-left: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  @media (max-width: 540px) {
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: #f8ebd7;
+  }
+}
+
+// Анимации
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animatedElement {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+// Дополнительные общие стили
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.horizontalLine {
+  border: 1px solid #f8ebd7;
+  margin: 40px 50px 30px;
+  opacity: 1;
+
+  @media (max-width: 750px) {
+    margin: 35px 20px 20px;
+  }
+}
+
+// Медиа-запросы из глобальных стилей для адаптивности
+@media all and (max-width: 1100px) {
+  .prosSection {
+    padding: 120px 50px 50px;
+  }
+
+  .stockDescription {
+    padding: 0px 50px 30px;
+  }
+}
+
+@media all and (max-width: 950px) {
+  .detailedStocksHeading {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+  }
+
+  .stockExplanation {
+    text-align: center;
+  }
+
+  .left {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .stockCover {
+    height: fit-content;
+  }
+
+  .detailedStocksHeading {
+    padding: 80px 15px 0px;
+  }
+
+  .detailedStockHeading {
+    font-size: 35px;
+  }
+
+  .prosSection {
+    padding: 60px 15px 20px;
+  }
+
+  .detailedStockPhoto {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+  }
+
+  .stockDescription {
+    padding: 0px 15px 30px;
+  }
+}
+
+@media all and (max-width: 540px) {
+  .detailedStockHeading {
+    font-size: 28px;
+  }
+
+  .prosSection {
+    padding: 50px 10px 20px;
+  }
+
+  .detailedStockPhoto {
+    width: 280px;
+    height: 280px;
+  }
+
+  .stockExplanation {
+    font-size: 16px;
+  }
+
+  .showMoreBtn {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 413px) {
+  .detailedStockHeading {
+    font-size: 24px;
+  }
+
+  .detailedStockPhoto {
+    width: 250px;
+    height: 250px;
+  }
+
+  .stockExplanation {
+    font-size: 15px;
+  }
+
+  .dashIcon {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 344px) {
+  .detailedStockHeading {
+    font-size: 22px;
+  }
+
+  .detailedStockPhoto {
+    width: 220px;
+    height: 220px;
+  }
+
+  .stockExplanation {
+    font-size: 14px;
+  }
+}

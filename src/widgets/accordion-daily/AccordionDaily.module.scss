@@ -1,0 +1,113 @@
+.accordionContainer {
+    width: 100%;
+}
+
+.accordionItem {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.activeAccordion, .default {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #3B3D42;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    text-align: left;
+    color: #ffffff;
+    
+    &:hover {
+        background-color: #4a4c52;
+    }
+    
+    &:focus {
+        outline: 2px solid #e2ac5a;
+        outline-offset: 2px;
+    }
+}
+
+.hidden {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    height: auto;
+    transition: 0.4s ease-in-out;
+    background-color: #2a2c30;
+    border-radius: 0 0 8px 8px;
+    opacity: 1;
+}
+
+.activeAccordion .arrow {
+    transform: rotate(45deg);
+}
+
+.arrow {
+    transition: transform 0.3s;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-size: 20px;
+    transform: translateY(-50%);
+}
+
+.accordionHeader {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
+}
+
+.accordionContent {
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff;
+    padding: 10px 0;
+}
+
+@media all and (max-width: 768px) {
+    .activeAccordion, .default {
+        padding: 12px 15px;
+    }
+    
+    .accordionHeader {
+        font-size: 16px;
+    }
+    
+    .arrow {
+        font-size: 18px;
+        right: 15px;
+    }
+}
+
+@media all and (max-width: 540px) {
+    .activeAccordion, .default {
+        padding: 10px 12px;
+        margin-bottom: 8px;
+    }
+    
+    .content {
+        padding: 12px 15px;
+    }
+}

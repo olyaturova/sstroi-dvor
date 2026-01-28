@@ -1,0 +1,91 @@
+.dailyContainer {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
+    padding: 0;
+}
+
+.dailyMain {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0;
+}
+
+.heading {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-top: 50px;
+    
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
+}
+
+.outlined {
+    position: relative;
+    color: transparent;
+    
+    &::after {
+        content: 'работы';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: white;
+        -webkit-text-stroke: 2px #e2ac5a;
+        z-index: 1;
+    }
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    
+    @media (max-width: 768px) {
+        font-size: 1.1rem;
+    }
+}
+
+.feedbackSection {
+    background: rgba(26, 26, 46, 0.8);
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background: linear-gradient(to bottom, transparent, rgba(26, 26, 46, 0.8));
+    }
+}
+
+.scrollAnimation {
+    will-change: transform, opacity;
+}
+
+:global {
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .text-warning {
+        color: #e2ac5a !important; 
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 576px) {
+    .dailyMain {
+        padding: 2rem 1rem !important;
+    }
+    
+    .heading {
+        font-size: 1.75rem !important;
+    }
+    
+    .outlined::after {
+        -webkit-text-stroke: 1px #e2ac5a;
+    }
+}

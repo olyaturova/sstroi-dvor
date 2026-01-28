@@ -1,0 +1,53 @@
+.all-stocks {
+    background-color: #202020;
+    padding: 90px 0;
+
+    @media (max-width: 1100px) {
+        padding: 60px 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 40px 0;
+    }
+}
+
+.white {
+    color: #ffffff;
+}
+
+.outlined {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    text-transform: uppercase;
+}
+
+.orange {
+    color: #e2ac5a;
+    font-weight: 700;
+}
+
+.lead {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 500;
+    margin: 20px 0 50px 7px;
+    line-height: 1.6;
+
+    @media (max-width: 768px) {
+        margin: 15px 0 30px;
+        font-size: 16px;
+    }
+}
+
+.form-section {
+    padding: 90px 0;
+
+    @media (max-width: 1100px) {
+        padding: 70px 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 50px 0;
+    }
+}
+

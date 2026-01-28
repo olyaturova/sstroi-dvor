@@ -1,0 +1,242 @@
+.stocksInfoContainer {
+  width: 100%;
+}
+
+.flexAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  
+  @media all and (max-width: 1300px) {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  
+  @media all and (max-width: 950px) {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.stockCard {
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.classCardInner {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  
+  @media (max-width: 540px) {
+    width: 280px;
+    height: 280px;
+  }
+  
+  @media (max-width: 413px) {
+    width: 250px;
+    height: 250px;
+  }
+  
+  @media (max-width: 344px) {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+.stockPhoto {
+  width: 300px;
+  height: 300px;
+  filter: brightness(80%);
+  transition: all 0.5s ease-in-out;
+  object-fit: cover;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 540px) {
+    width: 280px;
+    height: 280px;
+  }
+  
+  @media (max-width: 413px) {
+    width: 250px;
+    height: 250px;
+  }
+  
+  @media (max-width: 344px) {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+.stockName {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #e2ac5a;
+  text-shadow: 3px 3px 12px #000;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  z-index: 2;
+  margin: 0;
+  max-width: 70%;
+  
+  @media (max-width: 540px) {
+    font-size: 18px;
+    top: 25px;
+  }
+  
+  @media (max-width: 413px) {
+    font-size: 16px;
+    top: 20px;
+  }
+  
+  @media (max-width: 344px) {
+    font-size: 15px;
+    top: 15px;
+  }
+}
+
+.rightArrow {
+  font-size: 30px;
+  text-shadow: 3px 3px 12px #000;
+  position: absolute;
+  top: 28px;
+  right: 10px;
+  color: #f8ebd7;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateX(5px);
+  }
+  
+  @media (max-width: 540px) {
+    font-size: 26px;
+    top: 24px;
+  }
+  
+  @media (max-width: 413px) {
+    font-size: 24px;
+    top: 22px;
+  }
+  
+  @media (max-width: 344px) {
+    font-size: 22px;
+    top: 20px;
+  }
+}
+
+.stockLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  z-index: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animatedElement {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+
+@media all and (max-width: 950px) {
+  .flexAround {
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .stockCard {
+    margin: 15px;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .filteredStocks {
+    width: 110px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 540px) {
+  .flexAround {
+    gap: 15px;
+  }
+  
+  .stockCard {
+    margin: 10px;
+  }
+  
+  .classCardInner {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media all and (max-width: 413px) {
+  .stockCard {
+    margin: 8px;
+  }
+  
+  .classCardInner {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media all and (max-width: 344px) {
+  .flexAround {
+    gap: 10px;
+  }
+  
+  .stockCard {
+    margin: 5px;
+  }
+  
+  .classCardInner {
+    width: 220px;
+    height: 220px;
+  }
+}
+

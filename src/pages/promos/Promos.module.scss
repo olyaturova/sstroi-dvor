@@ -1,0 +1,111 @@
+.promosContainer {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+
+.heading {
+    color: #e2ac5a;
+    line-height: 1.2;
+    margin-top: 50px;
+    @media (max-width: 768px) {
+        font-size: 2.5rem !important;
+    }
+}
+
+.outlinedText {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    
+    &::after {
+        content: 'для наших клиентов';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: white;
+        -webkit-text-stroke: 2px #e2ac5a;
+        z-index: 1;
+    }
+}
+
+.description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.ctaButton {
+    background: linear-gradient(to bottom, #f8ebd7, #e2ac5a);
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+        background: linear-gradient(135deg, #e2ac5a, #f8ebd7);
+    }
+    
+    &:active {
+        transform: translateY(-1px);
+    }
+}
+
+.benefitsSection {
+    background-color: #fff;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    
+    .card {
+        border-radius: 20px;
+        overflow: hidden;
+        
+        &:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+            transition: box-shadow 0.3s ease;
+        }
+    }
+}
+
+.feedbackSection {
+    background: linear-gradient(135deg, #e2ac5a, 0%, #f8ebd7, 100%);
+    
+    .card {
+        border-radius: 20px;
+        
+        @media (max-width: 768px) {
+            border-radius: 10px;
+        }
+    }
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 576px) {
+    .heading {
+        font-size: 2rem !important;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+    }
+    
+    .ctaButton {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,209 @@
+
+.shopItemDetailsInfo {
+  width: 100%;
+}
+
+.detailedItemsHeading {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 50px;
+  
+  @media (max-width: 950px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  
+  &.relative {
+    position: relative;
+  }
+}
+
+.itemImageDetailed {
+  width: 300px;
+  height: 320px;
+  object-fit: cover;
+  
+  @media (max-width: 750px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.newBadge {
+  position: absolute;
+  top: 15px;
+  left: -7px;
+  padding: 15px 50px;
+  font-size: 14px;
+  background-color: #f8ebd7;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+  .newSign {
+    margin: 0;
+  }
+}
+
+.columnLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: start;
+  flex: 1;
+}
+
+.detailedItemName {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #202020;
+}
+
+.detailedItemPrice {
+  font-size: 22px;
+  color: #202020;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.addedItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.ctaButton {
+  color: #ffffff;
+  border: 2px solid #f8ebd7;
+  background: linear-gradient(to bottom, #f8ebd7, #e2ac5a);
+  height: 60px;
+  min-width: 250px;
+  padding: 0 15px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+  &:hover {
+    background: #e2ac5a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(226, 172, 90, 0.3);
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  @media (max-width: 540px) {
+    min-height: 50px;
+    min-width: 200px;
+    font-size: 16px;
+  }
+}
+
+.shoppingBagIcon {
+  font-size: 24px;
+  margin-right: 7px;
+}
+
+.errorMessage {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animatedElement {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+@media (max-width: 1100px) {
+  .shopItemContainer {
+    padding: 120px 50px 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  .shopItemContainer {
+    padding: 90px 30px 50px;
+  }
+  
+  .itemImageDetailed {
+    margin-bottom: 30px;
+  }
+  
+  .columnLeft {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .detailedItemName {
+    font-size: 26px;
+  }
+  
+  .detailedItemPrice {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .shopItemContainer {
+    padding: 90px 20px 40px;
+  }
+  
+  .detailedItemName {
+    font-size: 22px;
+  }
+  
+  .detailedItemPrice {
+    font-size: 18px;
+  }
+  
+  .newBadge {
+    padding: 10px 30px;
+    font-size: 12px;
+    left: -5px;
+  }
+}
+
+@media (max-width: 344px) {
+  .ctaButton {
+    min-width: 180px;
+    font-size: 14px;
+  }
+}

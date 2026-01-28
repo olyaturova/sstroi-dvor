@@ -1,0 +1,276 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  width: 100%;
+}
+
+.mainMenu {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  z-index: 30;
+  
+  @media (max-width: 768px) {
+    height: 60px;
+  }
+}
+
+.navbarLogo {
+  margin-right: auto;
+  padding-left: 50px;
+  
+  @media (max-width: 1100px) {
+    padding-left: 40px;
+  }
+  
+  @media (max-width: 540px) {
+    padding-left: 20px;
+  }
+}
+
+.companyLogo {
+  width: 200px;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 410px) {
+    width: 150px;
+  }
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  margin-right: 380px;
+  margin-bottom: 0;
+  
+  @media (max-width: 1300px) {
+    gap: 50px;
+    margin-right: 200px;
+  }
+  
+  @media (max-width: 1100px) {
+    display: none;
+  }
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+}
+
+.navList > .navItem:hover > .navLink {
+  color: black;
+}
+
+.navList > .navItem:hover > .navLink::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.navLink {
+  text-decoration: none;
+  color: #bfbfbf;
+  position: relative;
+  padding: 0px 0px 3px 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0px;
+    left: 0px;
+    background: #000000;
+    transition: all 0.3s ease-in-out;
+    transform: scaleX(0);
+    visibility: hidden;
+  }
+  
+  &:hover {
+    color: #000000;
+    
+    &::before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+}
+
+.cartQuantity {
+  border: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 30px;
+  
+  @media (max-width: 540px) {
+    margin-right: 15px;
+  }
+}
+
+.cartIcon {
+  color: #bfbfbf;
+  border: none;
+  font-size: 27px;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: #000000;
+  }
+}
+
+.cartBtn {
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  cursor: pointer;
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+.quantityContainer {
+  width: 20px;
+  
+  @media (max-width: 540px) {
+    width: 10px;
+  }
+}
+
+.menuToggle {
+  cursor: pointer;
+  position: relative;
+  z-index: 90;
+  display: flex;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  
+  &.open {
+    margin-top: 15px;
+  }
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.2s;
+  position: relative;
+  margin: 9px 45px 0px 0px;
+  
+  @media (max-width: 540px) {
+    margin: 7px 20px 0px 0px;
+  }
+}
+
+.hamburgerTop,
+.hamburgerMiddle,
+.hamburgerBottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #bfbfbf;
+  transition: all 0.5s;
+  z-index: 90;
+}
+
+.hamburgerMiddle {
+  transform: translateY(7px);
+}
+
+.hamburgerBottom {
+  transform: translateY(14px);
+}
+
+.open .hamburgerTop {
+  transform: rotate(45deg);
+}
+
+.open .hamburgerMiddle {
+  display: none;
+}
+
+.open .hamburgerBottom {
+  transform: rotate(-45deg);
+}
+
+// Корзина
+.cart {
+  background: #ffffff;
+  color: #202020;
+  position: fixed;
+  margin: auto;
+  right: 0px;
+  top: 75px;
+  border: none;
+  box-shadow: 2px 2px 10px rgba(190, 190, 190, 0.5), -2px -2px 10px rgba(190, 190, 190, 0.5);
+  z-index: 99;
+  width: 370px;
+  font-family: "Poppins", sans-serif;
+  transform: translateX(105%);
+  transition: transform 0.6s ease;
+  
+  @media (max-width: 768px) {
+    top: 60px;
+  }
+  
+  &.openCart {
+    transform: translateX(0);
+  }
+  
+  @media (max-width: 413px) {
+    width: 340px;
+  }
+  
+  @media (max-width: 344px) {
+    width: 320px;
+  }
+}
+
+// Адаптивность
+@media (max-width: 540px) {
+  .companyLogo {
+    width: 150px;
+  }
+  
+  .hamburger {
+    margin: 7px 20px 0px 0px;
+  }
+  
+  .cartQuantity {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 410px) {
+  .companyLogo {
+    width: 130px;
+  }
+}

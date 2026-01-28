@@ -1,0 +1,156 @@
+.section {
+    background-color: #202020;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            radial-gradient(circle at 20% 80%, rgba(226, 172, 90, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(226, 172, 90, 0.1) 0%, transparent 50%);
+        pointer-events: none;
+    }
+}
+
+.heading {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-size: clamp(2rem, 5vw, 3.125rem);
+    
+    @media (max-width: 768px) {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+    }
+}
+
+.outlinedText {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #e2ac5a, transparent);
+    }
+}
+
+.leadText {
+    color: #ffffff;
+    font-size: clamp(1rem, 2vw, 1.1875rem);
+    font-weight: 500;
+    line-height: 1.7;
+    opacity: 0.9;
+    
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
+}
+
+.highlight {
+    color: #e2ac5a;
+    font-weight: 700;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+    }
+    
+    &:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+.actionBtn {
+    --btn-height: 60px;
+    --btn-width: 250px;
+    
+    color: #ffffff;
+    border: 2px solid #f8ebd7;
+    background: linear-gradient(135deg, #f8ebd7 0%, #e2ac5a 100%);
+    height: var(--btn-height);
+    min-width: var(--btn-width);
+    padding: 0 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex; // Добавьте это
+    align-items: center; // Добавьте это
+    justify-content: center; // Добавьте это
+    text-decoration: none; // Для Link
+    border: none; // Bootstrap уже добавляет border
+    
+    // Удалите стандартные стили Bootstrap если нужно
+    &:hover, &:focus, &:active {
+        color: #ffffff !important;
+        text-decoration: none;
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s ease;
+    }
+    
+    &:hover {
+        background: #e2ac5a;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(226, 172, 90, 0.4);
+        
+        &::before {
+            left: 100%;
+        }
+    }
+    
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 15px rgba(226, 172, 90, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        --btn-height: 50px;
+        --btn-width: 200px;
+        font-size: 1rem;
+        padding: 0 1.5rem;
+    }
+    
+    @media (max-width: 480px) {
+        --btn-height: 45px;
+        --btn-width: 180px;
+        font-size: 0.875rem;
+    }
+
+
+}

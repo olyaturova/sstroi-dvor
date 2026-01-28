@@ -1,0 +1,86 @@
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+
+.filterButton {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #202020;
+  background-color: #ffffff;  
+  cursor: pointer;
+  margin: 0px 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+  min-width: 120px;
+  
+  &:hover {
+    color: #ffffff;
+    background-color: #202020;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(32, 32, 32, 0.2);
+  }
+  
+  @media (max-width: 750px) {
+    font-size: 13px;
+    padding: 8px 12px;
+    min-width: 100px;
+    margin: 0px 3px;
+  }
+  
+  @media (max-width: 540px) {
+    font-size: 12px;
+    padding: 6px 10px;
+    min-width: 90px;
+  }
+  
+  @media (max-width: 413px) {
+    font-size: 11px;
+    padding: 5px 8px;
+    min-width: 80px;
+  }
+  
+  @media (max-width: 344px) {
+    font-size: 10px;
+    padding: 4px 6px;
+    min-width: 70px;
+    margin: 0px 2px;
+  }
+}
+
+.filterButtonSelected {
+  color: #ffffff;
+  background-color: #202020;
+  border-color: #202020;
+  
+  &:hover {
+    background-color: #333333;
+    border-color: #333333;
+  }
+}
+
+.filterGroup {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  
+  @media (max-width: 750px) {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 540px) {
+    gap: 6px;
+    margin-bottom: 15px;
+  }
+}
+
+

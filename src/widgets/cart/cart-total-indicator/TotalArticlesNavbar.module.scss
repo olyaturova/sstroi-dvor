@@ -1,0 +1,54 @@
+.quantityContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    background-color: var(--primary-color, #666);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-left: 8px;
+    
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    }
+    
+    &:empty {
+        display: none;
+    }
+}
+
+.quantity {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    line-height: 1;
+    user-select: none;
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.quantityContainer.empty {
+    background-color: var(--gray-color, #ccc);
+    
+    .quantity {
+        color: var(--dark-gray, #666);
+    }
+}

@@ -1,0 +1,287 @@
+// Footer.module.scss
+
+.footer {
+  background-color: #202226;
+  
+  &Container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  &Section {
+    padding: 40px 0;
+    
+    @media (max-width: 768px) {
+      padding: 30px 0;
+    }
+  }
+  
+  &Social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+  }
+  
+  &SocialText {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0;
+    
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  
+  &SocialIcons {
+    display: flex;
+    gap: 20px;
+    
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
+  }
+}
+
+.socialIcon {
+  font-size: 24px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: #e2ac5a;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+.footerContent {
+  padding: 40px 0;
+  
+  @media (max-width: 768px) {
+    padding: 30px 0;
+  }
+}
+
+.footerRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  
+  @media (max-width: 768px) {
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.footerColumn {
+  & h6 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  
+  & h2 {
+    color: #e2ac5a;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+    
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+}
+
+.footerLogo {
+  color: #e2ac5a;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: #f8ebd7;
+    text-decoration: none;
+  }
+}
+
+.footerDescription {
+  color: #949ea2;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  & p {
+    margin-bottom: 12px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footerLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  
+  &:hover {
+    color: #e2ac5a;
+    text-decoration: none;
+    transform: translateX(5px);
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.footerContact {
+  & p {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.contactLink {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: #e2ac5a;
+    text-decoration: none;
+  }
+}
+
+.footerBottom {
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  
+  & span {
+    color: #949ea2;
+    font-size: 14px;
+    display: block;
+    
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+}
+
+// Стили для иконок MDB (если они используются)
+.mdbIcon {
+  color: #e2ac5a;
+  font-size: 18px;
+}
+
+// Адаптивность
+@media (max-width: 1100px) {
+  .footerContent {
+    padding: 30px 0;
+  }
+  
+  .footerRow {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+  
+  .footerSocial {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .footerContact {
+    & p {
+      justify-content: center;
+    }
+  }
+  
+  .footerLink {
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footerColumn {
+    & h2 {
+      font-size: 22px;
+    }
+    
+    & h6 {
+      font-size: 16px;
+    }
+  }
+  
+  .footerLink,
+  .footerDescription,
+  .footerContact p {
+    font-size: 14px;
+  }
+  
+  .socialIcon {
+    font-size: 20px;
+  }
+  
+  .footerBottom {
+    padding: 15px 0;
+    
+    & span {
+      font-size: 12px;
+    }
+  }
+}
